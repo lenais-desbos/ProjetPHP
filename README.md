@@ -1,2 +1,3 @@
 # projet_php
-vive vive vive les gros nichons
+
+Projet effectué en novembre/décembre 2021
