@@ -1,0 +1,24 @@
+ /*Tout ce qui est propre à la page faq*/
+
+/*Centrer les puces*/
+#un, #deux, #trois, #quatre, #cinq, #six, #sept, #huit, #neuf, #dix, #onze {text-align: center;}
+
+div.questionEtReponse {
+	margin-bottom: 20px;
+	padding: 5px 15px;
+	border: 1px solid black;
+}
+
+/*Les questions prennent la couleur bleu*/
+h2 {
+	color: #4043A4;
+}
+
+/*Bouton lien vers Contacts*/
+.CheminContacts {
+	text-align: center;
+	background-color: #FCC499;
+    border: #b3794e solid 2px;
+    padding: 10px;
+    border-radius: 25px;
+}

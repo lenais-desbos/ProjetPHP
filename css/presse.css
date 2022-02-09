@@ -1,0 +1,72 @@
+article{
+    background-color: var(--main-color-bg);
+    margin: 15px 15px 0px 15px;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+
+aside{
+    background-color: var(--main-color-bg);
+    margin: 15px 0px 0px 0px;
+    padding: 5px 5px;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background: none;
+    padding: 0px 0px;
+}
+
+section{
+    margin-bottom: 25px;
+    border: 1px solid black;
+}
+
+img.logo{
+    width: 40px;
+}
+
+#listePresse{/*Affichage de la liste des articles*/
+    border: 1px solid black;
+    width: 380px;
+    margin: 0px 10px 15px 0px;
+}
+
+#listePresse a{
+    color: black;
+}
+
+@media (min-width:999px){/*Quand le graphique est en petit, passer la souris dessus l'agrandit*/
+    img.graph:hover{
+        position: fixed;
+        left: 25%;
+        top: 15%;
+        width: 70%;
+    }
+}
+
+@media (max-width:999px){
+    article{
+        width: auto;
+        margin: 0px;
+    }
+    aside{
+        width: auto;
+    }
+    main{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px){/*Ne sert qu'a mettre la liste des article en responsive*/
+    #listePresse{
+        width: auto;
+    }
+}

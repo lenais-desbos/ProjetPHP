@@ -1,0 +1,73 @@
+/*Tout ce qui est propre à Nous Rejoindre et les trois métiers*/
+h2{
+    background-color: #FFAD00;
+    text-indent: 10px; /*Petit alinéa de 10px*/
+}
+
+h3 {color: blue}
+
+p {text-indent: 10px}
+
+/*==============================NousRejoindre==============================*/
+/*Tableau*/
+#introTableau {
+    text-align: center;
+    font-weight: bold; /*en gras*/
+}
+
+table, table td, table th{border: 1px solid black}
+
+table {
+    border-collapse:collapse; /*Fusionne bordures avec cellules*/
+    text-align: center;
+    width: 100%; /*Le tableau prend toute la place sur la page*/
+}
+
+tr {margin : auto}
+
+thead {
+    background-color: #1E90FF; /*Couleur de l'arrière-plan du thead (#1E90FF = Bleu)*/
+    color: white;
+}
+
+tbody tr:nth-child(odd) {background-color: white} /*Couleur de l'arrière-plan des lignes impaires du tbody*/
+tbody tr:nth-child(even) {background-color: #DCDCDC} /*Couleur de l'arrière-plan des lignes paires du tbody. #DCDCDC=lightgrey*/
+
+
+/*Tant que l'écran est suffisement grand pour le tableau, la liste n'apparaît pas*/
+ul.tresPetit{display: none;}
+
+
+@media (max-width: 480px){ /*Responsive design pour les smartphones*/
+    /*Ce tableau ne peut pas etre reduit a l'infini, on le remplace par une simple liste*/
+    table{display: none}
+
+    /*Evite que le titre dépasse de son cadre*/
+    h1{font-size: 130%}
+
+    /*Apparition de la liste des métiers*/
+    ul.tresPetit{display: block}
+}
+
+/*===========================Métier I, II et III===========================*/
+/*Espacement des différents labels/inputs*/
+fieldset div {margin-bottom: 20px}
+
+/*classe droite s'aligne avec la bordure de droite et
+n'a pas besoin de laisser de marge en-dessous car c'est la fin du fieldset*/
+.droite {
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+/*================================Métier I=================================*/
+/*Mise en page des textes en latin pour le distinguer visuellement du reste*/
+.latin {
+    text-indent: 35px;
+    margin-left: 30px;
+    font-style: italic;
+}
+
+/*===============================Métier III================================*/
+/*Mettre une phrase en rouge*/
+#rouge {color: #8B0000}

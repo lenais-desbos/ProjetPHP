@@ -1,0 +1,12 @@
+/*Tout ce qui est propre à la page Index*/
+#devise{
+	text-align: center;
+	font-family: fredoka, Arial Black;
+	color: #E19962;
+}
+
+@media (max-width:800px){
+	div>img{
+		width: 100%;/*Met l'image du transporteur a la bonne taille*/
+	}
+}

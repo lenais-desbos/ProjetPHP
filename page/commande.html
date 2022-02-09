@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Commandez ici !</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/commandeETcontact.css">
+        <script type= "text/javascript" src="../js/script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/ico" href="../images/logo.ico">
+    </head>
+
+    <body>
+        <header>
+    <div class="menuSansBurger">
+            <a href="../index.html"><img src="../images/entrepriseLogo.png" alt="logo"></a>
+        <nav>
+            <div>
+                <a href="../index.html">Accueil</a>
+            </div>
+                <div>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div>
+                    <a href="equipe.html">Équipe</a>
+                </div>
+                <div>
+                    <a href="produit.html">Produit</a>
+                </div>
+                <div>
+                    <a href="presse.html">Presse</a>
+                </div>
+                <div>
+                    <a href="faq.html">F.A.Q</a>
+                </div>
+                <div class="conteneur">
+                    <a href="nousRejoindre.html">Nous Rejoindre</a>
+                    
+                    <div class="submenu">
+                        <div><a href="metierI.html">Ensorceleur·euse</a></div>
+                        <div><a href="metierII.html">Infirmière Joëlle</a></div>
+                        <div><a href="metierIII.html">Marcheur·euse</a></div>
+                    </div>
+                </div>    
+        </nav>
+    </div>
+        <div class="burger">
+            <img src="../images/burger.png" alt="burger">
+                <nav id="menu2">
+                    <div><a href="../index.html">Accueil</a></div>
+                    <div><a href="contacts.html">Contacts</a></div>
+                    <div><a href="equipe.html">Équipe</a></div>
+                    <div><a href="produit.html">Produit</a></div>
+                    <div><a href="presse.html">Presse</a></div>
+                    <div><a href="faq.html">F.A.Q</a></div>
+                    <div><a href="nousRejoindre.html">Nous Rejoindre</a></div>
+                </nav>
+        </div>
+    </header> <!--header commun-->
+
+         <!--les commandes-->
+
+        <main>
+            <h1>FORMULAIRE DE COMMANDE</h1>
+            <div id="commande">
+                <form action="machin.php" method="get">
+
+                    <fieldset>
+
+                        <legend>Informations personnelles</legend>
+
+                        <!--partie info perso (avec nom prenom sexe date adresse email mdp)-->
+                        <p>
+                            Veuillez compléter les informations suivantes :
+                            <div>
+                                <p>
+                                    <label for="surname">Nom et Prénom* :</label>
+                                    <input id="surname" name="uname" type="text" required="">
+                                    <input id="firstname" name="firstname" type="text" required="">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <label>Sexe :</label>
+                                    <input id="f" name="sexe" type="radio">Femme
+                                    <input id="h" name="sexe" type="radio">Homme
+                                    <input id="enby" name="sexe" type="radio">Non-binaire
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <label for="date">Date de naissance :</label>
+                                    <input id="date" name="date" type="date">
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="adr">Adresse* :</label>
+                                <input id="adr" name="adr" type="text" placeholder="ex : 36 rue machin" required="">
+                            </div>
+                            <div>
+                                <label for="vi">Code postal et ville* :</label>
+                                <input id="code" name="postal" type="text" placeholder="ex : 87400" required="">
+                                <input id="vi" name="vi" type="text" placeholder="ex : Saint-Léonard" required="">
+                            </div>
+
+                            <div>
+                                <label for="mail">Email* :</label>
+
+                            <!--inscription en quelque sorte-->
+
+                                <input id="mail" name="mail" type="email" placeholder="exemple@domain.com" required="">
+                            </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Votre Dracaufeu</legend>
+
+                        <!--Partie custom du draco-->
+                        <p>
+                            <label for="dracaufeu-select">Sélectionnez votre Dracaufeu ! :</label>
+
+                            <div>
+                                <select name="drac" id="dracaufeu-select" required="">
+                                    <option value="">--Choisissez le type--</option>
+                                    <option value="dro">Original (600.000 ₽)</option>
+                                    <option value="drx">X (750.000 ₽)</option>
+                                    <option value="dry">Y (750.000 ₽)</option>
+                                    <option value="drgm">Gigamax (900.000 ₽)</option>
+                                </select>
+                            </div>
+                            <div>Option Shiny (prix doublé)<input id="shiny" type="checkbox"></div>
+                            <div>Option message personnalisé (+ 50.000 ₽)<input id="check" type="checkbox" onChange="verif();"></div>
+                            
+                              <!--fait apparaitre au check-->
+
+                            <div id="2">
+                                <label>Message personnalisé que va apprendre votre dracaufeu :</label>
+                                <textarea name="message" placeholder="Votre message doit être une phrase simple pour que votre futur meilleur ami puisse l'apprendre avant d'arriver !" rows="5" cols="50"></textarea>
+                            </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Livraison et paiement</legend>
+
+                        <!--partie money/livraison, petites images pour accompagner chaque option pour faire plus sympa-->
+
+                        <div>
+                            <label>Sélectionnez le type de livraison dont vous souhaitez béneficier :</label>
+                            <p><input id="st" name="liv" type="radio">Livraison Standard (Gratuite) <img class="vingt" src="https://image.noelshack.com/fichiers-md/2015/07/1423868157-3697-card-communaute.png" alt="pokeball"></p>
+                            <p><input id="rap" name="liv" type="radio">Livraison Rapide (+4.400 ₽) <img class="deux" src="https://www.pokemon-france.com/wp-content/uploads/2013/10/Rapide-Ball.png" alt="rapideball"></p>
+                            <p><input id="24" name="liv" type="radio">Livraison 24h (+8.800 ₽) <img class="sept" src="https://pokeoneguide.com/wp-content/uploads/elementor/thumbs/masterball-nve2ioa57xvw13gucy6gnneioo23be6vg0ir3g0ptk.png" alt="masterball"></p>
+                        </div>
+
+                        <div>
+                            <label>Moyen de paiement :</label>
+                            <p>
+                                <input id="card" name="paiement" type="radio">Carte bancaire <img class="vingt" src="https://img.icons8.com/ios/452/bank-cards--v1.png" alt="carte">
+                                <input id="4fois" name="paiement" type="radio">4 fois sans frais <img class="vingt" src="https://image.flaticon.com/icons/png/512/88/88030.png" alt="div">
+                                <input id="cash" name="paiement" type="radio">Cash <img class="quinze" src="https://archive-media-1.nyafuu.org/vp/image/1486/57/1486574594799.png" alt="cash">
+                            </p>
+                        </div>
+                    </fieldset>
+
+
+                  <input type="submit" value="Envoyer">
+
+                  <div>*Champs obligatoires</div>
+                </form>
+            </div>
+        </main>
+
+        <a href="#" id="ancre"><img id="ballon" src="../images/ancre.png" alt="ancre"></a>
+
+        <footer>
+            <div id="social_block">
+                <a href="https://fr-fr.facebook.com/Pokemon/" target="_blank"><img class="social_icon" src="../images/icon_facebook.png" alt="logo Facebook"></a>
+                <a href="https://twitter.com/PokemonFR" target="_blank"><img class="social_icon" src="../images/icon_twitter.png" alt="logo Twitter"></a>
+                <a href="https://www.instagram.com/pokemon.fra/" target="_blank"><img class="social_icon" src="../images/icon_instagram.png" alt="logo Instagram"></a>
+                <a href="https://github.com/gatiendep/ProjetSiteWeb" target="_blank"><img class="social_icon" src="../images/icon_github.png" alt="logo GitHub"></a>
+            </div>
+            <span>
+                Dracovente © 666-2020
+            <a href="./mentionsLegales.html" class="aFooter">Mentions légales</a>
+        </span>
+        </footer>
+        <!--footer commun-->
+    </body>
+</html>

@@ -1,0 +1,57 @@
+ /*Tout ce qui est propre à la page equipe*/
+h2 {
+	text-indent: 10px; /*léger espaçage pour éviter de coller le bord*/
+}
+
+/*Identifiants des personnes*/
+#depeyre h2{
+	background-color: #FFAD00;
+	/*Change la couleur d'arrière-plan en jaune*/
+	text-align: center;
+}
+
+#fressard h2{
+	background-color: #F59BAD;
+	/*Change la couleur d'arrière-plan en rose*/
+	text-align: center;
+}
+
+#gavioli h2{
+	background-color: #3B4CCA;
+	/*Change la couleur d'arrière-plan en bleu*/
+	text-align: center;
+}
+
+#viguier h2{
+	background-color: #FF0000;
+	/*Change la couleur d'arrière-plan en rouge*/
+	text-align: center;
+}
+
+.photoETdescription {
+    display: flex;
+}
+
+.photo{
+    flex-direction: column;
+    align-self: center;
+}
+
+.description {
+	text-indent: 15px; /*Alinéa*/
+    text-align: justify;
+}
+
+
+@media (max-width: 768px){
+	.photoETdescription {
+    	display: block;
+	}
+
+	.photo {
+    	margin: 0px;
+    	width: 100%;
+	}
+
+	
+}

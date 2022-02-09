@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head><title>Contactez nous</title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/commandeETcontact.css">
+        <script type= "text/javascript" src="../js/script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/ico" href="../images/logo.ico">
+    </head>
+
+    <body>
+        <header>
+    		<div class="menuSansBurger">
+        	    <a href="../index.html"><img src="../images/entrepriseLogo.png" alt="logo"></a>
+        		<nav>
+					<div>
+						<a href="../index.html">Accueil</a>
+					</div>
+					<div>
+						<a href="contacts.html">Contacts</a>
+					</div>
+					<div>
+						<a href="equipe.html">Équipe</a>
+					</div>
+					<div>
+						<a href="produit.html">Produit</a>
+					</div>
+					<div>
+						<a href="presse.html">Presse</a>
+					</div>
+					<div>
+						<a href="faq.html">F.A.Q</a>
+					</div>
+					<div class="conteneur">
+						<a href="nousRejoindre.html">Nous Rejoindre</a>
+						
+						<div class="submenu">
+							<div><a href="metierI.html">Ensorceleur·euse</a></div>
+							<div><a href="metierII.html">Infirmière Joëlle</a></div>
+							<div><a href="metierIII.html">Marcheur·euse</a></div>
+						</div>
+					</div>    
+				</nav>
+			</div>
+			<div class="burger">
+				<img src="../images/burger.png" alt="burger">
+				<nav id="menu2">
+					<div><a href="../index.html">Accueil</a></div>
+					<div><a href="contacts.html">Contacts</a></div>
+					<div><a href="equipe.html">Équipe</a></div>
+					<div><a href="produit.html">Produit</a></div>
+					<div><a href="presse.html">Presse</a></div>
+					<div><a href="faq.html">F.A.Q</a></div>
+					<div><a href="nousRejoindre.html">Nous Rejoindre</a></div>
+				</nav>
+			</div>
+    	</header> <!--header commun-->
+
+    	<!--les contacts-->
+
+		<main>
+			<h1>NOUS ENVOYER UN MESSAGE</h1>
+			<div id="contact">
+				<form action="machin.php" method="get">
+					<fieldset>
+						<legend>Informations personnelles</legend>
+						<!--info perso-->
+						<div class="gauche">
+							Veuillez completer les informations suivantes :
+							<div><label for="surname">Nom* :</label>
+								<input id="surname" name="uname" type="text" required="">
+							</div>
+
+							<div><label for="firstname">Prénom :</label>
+								<input id="firstname" name="firstname" type="text">
+							</div>
+
+							<div><label for="mail">Email* :</label>
+								<input id="mail" name="mail" type="email" placeholder="yourmail@domain.com" required="">
+							</div> <!--doit respecter la forme pour accepter l'input-->
+							<div><label for="country-select">Lieu de résidence :</label></div>
+							
+							<div><select name="country" id="country-select">
+									<option value="">--Choisissez une option--</option>
+									<option value="de">Allemagne</option>
+									<option value="au">Australie</option>
+									<option value="br">Brésil</option>
+									<option value="ca">Canada</option>
+									<option value="ch">Chine</option> 
+									<option value="eg">Egypte</option>
+									<option value="es">Espagne</option>
+									<option value="fr">France</option>
+									<option value="in">Inde</option>
+									<option value="jp">Japon</option>
+									<option value="po">Portugal</option>
+									<option value="uk">Royaume-Uni</option>
+									<option value="su">Russie</option>
+									<option value="tv">Tuvalu</option>
+									<option value="us">USA</option>
+								</select></div>
+
+							<div><label for="code">Code Postal :</label>
+								<input id="code" name="postal" type="text" placeholder="ex 87400" pattern="^(?:[0-8]\d|9[0-8])\d{3}$">
+							</div><!--pattern accepte que les codes postaux francais-->
+						</div>
+						<div id="prof">
+							<img src="../images/profchen.png" alt="profchen">
+						</div>
+					</fieldset>
+
+								
+					<label for="lu">J’ai bien lu les <a href="./mentionsLegales.html">mentions légales</a> que je n’ai pas lues*</label>
+					<input id="lu" name="lu"  onChange="echange(); " type="checkbox" required="">
+
+
+					<!--par defaut le envoyer disabled est affiché, lorsque la case est cochée, le bouton envoyer est accessible-->
+					<p><input id="1" class="off" value="Envoyer" type="submit">
+						<input id="3" class="on" value="Envoyer" type="submit" disabled>
+					</p>
+					<div>* Champs obligatoires</div>
+				</form>
+			</div>
+		</main>
+        <!--ancre commun-->
+        <a href="#" id="ancre"><img id="ballon" src="../images/ancre.png" alt="ancre"></a>
+        <!--footer commun-->
+        <footer>
+            <div id="social_block">
+                <a href="https://fr-fr.facebook.com/Pokemon/" target="_blank"><img class="social_icon" src="../images/icon_facebook.png" alt="logo Facebook"></a>
+                <a href="https://twitter.com/PokemonFR" target="_blank"><img class="social_icon" src="../images/icon_twitter.png" alt="logo Twitter"></a>
+                <a href="https://www.instagram.com/pokemon.fra/" target="_blank"><img class="social_icon" src="../images/icon_instagram.png" alt="logo Instagram"></a>
+                <a href="https://github.com/gatiendep/ProjetSiteWeb" target="_blank"><img class="social_icon" src="../images/icon_github.png" alt="logo GitHub"></a>
+            </div>
+            <span>
+				Dracovente © 666-2020
+			<a href="./mentionsLegales.html" class="aFooter">Mentions légales</a>
+		</span>
+        </footer>
+    </body>
+</html>

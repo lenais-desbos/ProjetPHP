@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    background-color: #1E90FF;
+}
+
+thead {
+    border-collapse: collapse;
+    background-color: red;
+}
+
+.panier_container{
+    background-color: #FAAA6D;
+    align-content: center;
+}
+
+.panier_content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img_panier {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+td {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: #8B0000 solid 1px;
+
+}
+
+tr {
+    margin: px;
+}
+
+td p {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
+}

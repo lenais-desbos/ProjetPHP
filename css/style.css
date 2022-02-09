@@ -1,0 +1,339 @@
+/*Ce fichier css s'applique à toutes les pages, il contient notament le style du header et du footer*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root{      /*Cette partie sert à définir des variables qui pourrons être utilisé dans tout les css*/
+    --header-color-bg: #FAAA6D;                     /*La couleur de fond du header et du footer*/
+    --header-link-hover: #29549C;                   /*Couleur des liens quand la sourie passe dessus*/
+    --main-color-bg:rgba(255,255, 240, 0.9);        /*Couleur de background du main*/
+}
+
+/*LES POLICES*/
+/*Importation de la police d'écriture Questa*/
+@font-face {
+    font-family: 'questa';
+    src: url('../font/2-Questa_Regular-webfont.woff2') format('woff2'),
+    url('../font/2-Questa_Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Importation de la police d'écriture Fredoka*/
+@font-face {
+    font-family: "fredoka";
+    src: url(../font/FredokaOne.ttf);
+}
+
+/*Polices d'écriture de base (Cette police d'écriture n'est pas conservée pour le header et les titres de type h1)*/
+*{
+    font-family: questa, Arial;
+}
+/*****************************/
+
+
+/*APARENCE GLOBALE*/
+
+body {
+    background-image: url("../images/fond2.jpg");       /*Met le dragon en fond*/
+    background-attachment: fixed;       /*Empèche le fond de défiler avec le texte*/
+    background-repeat: no-repeat;       /*Si on prend un écrant plus grand que le fond, empèche celui-ci de se duppliquer*/
+    background-color: black;     /*Quand l'image ne peut pas prendre toute la page, met un fond noir à la place*/
+}
+
+
+main {/*Le main contient toutes les informations spécifiques à chaque page*/
+    margin: 50px 4% 40px 4%;
+    background-color: var(--main-color-bg);/*On va chercher le contenu de la variable*/
+    font-size: 20px;
+    padding: 30px 30px 30px 30px;
+}
+
+
+header a:-webkit-any-link {     /*Change la couleur des liens du header qu'il soit burger ou non*/
+    font-family: "fredoka" ,"Arial Black"; /*Change la police d'écriture*/
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/****************************************/
+
+
+/*LE TEXTE*/
+h1 {
+    font-family: "fredoka", "Arial Black";    /*Change la police d'écriture*/
+    background-color: #3D7DCA;    /*Change la couleur d'arrière-plan en bleu*/
+    color: white;    /*Change la couleur du texte en blanc*/
+    text-align: center;	/*Met le texte au centre*/
+	padding: auto;
+    border: #3A3F43 double thick;    /*Ajoute une bordure*/
+    border-radius: 30px;    /*Arrondi de la bordure*/
+}
+
+
+.strong{        /*Met en gras pour ne pas avoir à rajouter de balise <strong>*/
+    font-weight: bold;
+}
+/************************************/
+
+/*LES FORMULAIRES*/
+textarea {       /*Fait en sorte que les zones de textes s'affichent toujours avec une taille minimum*/
+    width: 80%;
+    min-height: 100px;
+}
+
+/******************/
+
+
+ /*Le FOOTER*/
+ 
+ footer.absolu{/*Permet un bon affichage des pages trop vides*/
+         position: absolute;
+         bottom: 10px;
+ }
+
+ footer{
+     display: none;
+ }
+ /*****************/
+
+/*L'ANCRE*/
+#ancre {        /*Place l'ancre, qui permet de remonter en haut des page*/
+    position : fixed;
+    top : 83%;
+    left: 90%;
+}
+
+a#ancre>img {       /*Configure la taille de l'ancre*/
+    width : 85px;
+    height: auto;
+}
+
+/*******************/
+
+
+@media (min-width:992px){   /*Si la largeur de l'écran est supérieure à 992px, c'est à dire pour les grands ecrans*/
+
+
+    /*LE HEADER SANS LE BURGER*/
+    .menuSansBurger {
+        position: fixed;
+        width: 100%;
+        background-color: #FAAA6D;
+        }
+    
+    header {                 /*Header sans burger*/
+        display: flex;      /*Utilisation du flex dans le header*/
+    }
+
+    header .burger{     /*Cache le burger*/
+        display: none;
+    }
+
+    header .submenu{/*Donne les caractéristiques des éléments du menu déroulant des métiers*/
+        display: none;
+        margin: 0px 0px 0px 0px;
+        background-color: var(--header-color-bg);
+        background-color: #E19962;
+        border-top: none;
+        border-radius: 15px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    header nav {     /*Positionne le header sans burger*/
+        position: absolute;     /*On bloque le menu en haut de l'écran*/
+        width: 90%;     /*Largeur à remettre à 100% sur les petits écrans*/
+        top: 10%;
+        left: 5%;
+        right: 5%;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    header nav > div {       /*S'occupe de l'apparence du header sans burger*/
+        background-color: var(--header-color-bg);
+        text-align: center;
+        border-radius: 15px;
+		flex-grow: 1;
+		left: 60%;
+        margin: 5px 5px 5px 5px;
+    }
+
+    header nav > div:hover{/*Augmente la taille de l'élement sur lequel la souris passe*/
+        flex-grow: 3;
+        background-color: #E19962;
+        transition:600ms;/*Permet d'éviter que l'animation soit instantanée*/
+    }
+
+    header nav div a{/*Taille des liens dans le header*/
+        font-size: 25px;
+    }
+
+    header nav div a:hover{/*Met en gras et en couleur la fiche métier sur laquelle passe la souris*/
+        font-weight: bolder;
+        color: var(--header-link-hover);
+    }
+
+    header nav>div:hover .submenu{/*Quand la souris passe dessus, on ouvre les sous-menus*/
+        display: block;
+    }
+
+    header nav>div.conteneur:hover {/*Rétablit les angles de "Nous Rejoindre" afin de ne pas avoir d'espace avec ses sous-menus*/
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+
+
+    #ancre {        /*Place l'ancre plus à droite sur les grand écrans*/
+        position : fixed;
+        top : 83%;
+        left: 94%;
+    }
+}
+
+    /*LE FOOTER*/
+@media (min-width: 480px){
+    footer{
+        background-color: var(--header-color-bg);
+        width:100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    body footer a.aFooter{/*On specifie les caractéristiques des balises <a> du footer pour qu'elles ne soient pas modifiées*/
+        font-size: 15px;
+        margin: 0px 30px;
+        color:black;
+    }
+    footer span{
+        font-size: 15px;
+        margin: 0px 30px;
+        display :flex;
+        flex-direction: column-reverse;
+        align-self: center;
+    }
+
+    /*Donne une dimension et un placement aux logos des réseaux sociaux*/
+    .social_icon {
+        width: 30px;
+        height: auto;
+        margin: 10px 10px 10px 10px;
+    }
+}
+
+    @media (max-width:992px) {/*On fera une copie de la taille au-dessus pour la plupart des designs responsives*/
+        /*APARENCE GLOBALE*/
+        body{
+            background-size: 100%;
+        }
+        
+        main{
+            background-color: rgba(255, 255, 240, 0.85);
+        }
+        /******************/
+    
+    
+        /*LE HEADER AVEC BURGER*/
+
+        .menuSansBurger{
+            display: none;
+        }
+    
+        header{
+            width: 800px;
+        }
+    
+        header div.burger{
+            width: 190px;
+            position: fixed;
+            top : 0%;
+            left: 0%;
+        }
+    
+        header div.burger:hover{
+            background-color: #FAAA6D;
+            font-size: 20px;
+        }
+    
+        header div.burger img{
+            width: 50px;
+            height: 50px;
+        }
+    
+        header div.burger>nav#menu2{
+            display: none;
+            width: 800px;
+            position: relative;
+            font-size: 25px;
+        }
+    
+        header>div.burger:hover nav#menu2{
+            margin-left: 5px;
+            display: block;
+        }
+    
+        header>div.burger:hover nav#menu2 a{
+            border-top: none;
+        }
+    
+        header>div.burger:hover nav#menu2 a:hover{/*Permet de colorer les liens du burger sur lesquels la souris passe*/
+            font-weight: bolder;
+            color: var(--header-link-hover);
+        }
+        /************************/
+    }
+
+
+@media (max-width:700px){
+
+        /*LES FORMULAIRES*/
+    
+    /*Change l'apparence des inputs */
+    input, select{
+        border-radius: 7px;
+        border: none;
+        outline: none;
+    }
+
+    select:focus, input:focus{      /*Remise en place du outline en utilisant la bordure pour contrôler l'apparence*/
+        border: 2px solid black;
+    }
+    /**********************/
+
+
+    /*L'ANCRE*/
+
+    #ancre {
+        top : 87%;
+        left: 85%;
+    }
+
+    a#ancre>img{
+        width : 70px;
+        height: auto;
+    }
+    /*********************/
+}
+
+
+@media (max-width: 480px){/*Pour les très petits écrans, on supprime l'image de fond afin d'avoir la meilleure visibilité posible*/
+    /*APARENCE GLOBALE*/
+    body{
+        background-image: none;
+    }
+
+    main{
+        margin: 0;/*On enlève les espaces sur les bords*/
+    }
+    /******************/
+}
+
+

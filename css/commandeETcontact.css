@@ -1,0 +1,105 @@
+main #commande {
+    text-align: center;
+}
+
+main #contact {
+    text-align: center;
+}
+
+.question {
+    margin-bottom: auto;
+}
+
+/*variable pour le javascript*/
+.on {
+    visibility: visible;
+}
+    
+.off {
+    display: none;
+    }
+
+/*taille des images*/
+.vingt {
+ width: 20px;
+}
+
+.deux {
+    width: 22px;
+}
+
+.quinze {
+    width: 15px;
+}
+
+.sept {
+    width: 17px;
+}
+
+fieldset{ /*Met le fond en gris et arrondit les coins*/
+    background-color: #4b4f5377 ;
+    border:2px solid ;	
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    margin-bottom: 10px;
+}
+
+#date{
+    margin-bottom: 15px;
+}
+
+#commande{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact fieldset {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gauche{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#prof img {
+    width: 300px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#contact div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message{
+display: flex;
+flex-direction: column;
+}
+
+@media (max-width:999px){
+    #contact div {
+        display: block;
+    }
+    #contact fieldset{
+        display :block;
+        margin-bottom: 15px;
+    }
+    #prof img{
+        display : none;
+    }
+    #commande img {
+        display : none;
+    }
+}

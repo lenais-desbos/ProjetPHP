@@ -1,0 +1,13 @@
+h1, h2 {
+	text-align: center;
+}
+
+#devise {
+	font-family: fredoka, Arial Black;
+	color: #E19962;
+}
+
+p {
+    text-align: justify;
+    line-break:loose;
+}
